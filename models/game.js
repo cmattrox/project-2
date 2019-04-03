@@ -23,16 +23,6 @@ module.exports = (sequelize, Sequelize) => {
           max: { args: 10, error: "Pick between 6-10" },
         }
       }
-      // full_game: {
-      //     type: Sequelize.BOOLEAN,
-      //     defaultValue: true
-      // }
-      // time_stamp: {
-      //     type: 'TIMESTAMP',
-      //     defaultValue: Sequelize.CURRENT_TIMESTAMP,
-      //     allowNull: false,
-      //     defaultValue: true
-      // }
   });
 
   Game.associate = (models) => {

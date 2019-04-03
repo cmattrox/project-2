@@ -14,12 +14,13 @@ module.exports = function(app) {
         res.render('players', {
           error: err
         });
+
         // Handle any error that occurred in any of the previous
         // promises in the chain.
       });
   });
 
-    // GET route for getting all gams
+    // GET route for getting all games
     app.get('/api/games', (req, res) => {
       db.Game.findAll({
         include: [db.User], 
@@ -30,6 +31,9 @@ module.exports = function(app) {
         res.render('games', {
           error: err
         });
+        document.getElementById("join_button").addEventListener("click", function() {
+          console.log("Join button clicked!")
+        })
         // Handle any error that occurred in any of the previous
         // promises in the chain.
       });
